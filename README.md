@@ -9,5 +9,5 @@ Currently, two official plugins are available:
 
 
 Ecommerce Website(HaveMore) -Frontend 
-using reactjs for jsx frontend logic,bootstrap for css 
+using reactjs for jsx frontend logic,bootstrap for css ,router is used for routing the pages and contextApi is used for statemanagement
 
