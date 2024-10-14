@@ -34,7 +34,7 @@ export const useThisContext=()=>useContext(UserContext)
 
 
 
-const API = "http://localhost:4002/getItem";
+const API = "https://project-name-backend-1-5zgo.onrender.com/getItem";
 
 export function UserContextProvider({children})
 {

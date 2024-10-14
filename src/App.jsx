@@ -53,7 +53,7 @@ const[user,setUser]=useState([])
     return decoded.exp > currentTime;
   }
   useEffect(()=>
-  { axios.get("http://localhost:4002/getItem").then(users=>setUsers(users.data)).catch(err=>console.log(err)
+  { axios.get("https://project-name-backend-1-5zgo.onrender.com/getItem").then(users=>setUsers(users.data)).catch(err=>console.log(err)
    
     )
   },[])
@@ -61,7 +61,7 @@ const[user,setUser]=useState([])
   
       useEffect(()=>
         { 
-          axios.get("http://localhost:4002/getUsers").then((user)=>setUser(user.data)).catch(err=>console.log(err)
+          axios.get("https://project-name-backend-1-5zgo.onrender.com/getUsers").then((user)=>setUser(user.data)).catch(err=>console.log(err)
           )
         },[])
      

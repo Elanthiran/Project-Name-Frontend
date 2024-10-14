@@ -34,7 +34,7 @@ const Login = () => {
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting, setErrors }) => {
           try {
-            const response = await axios.post('http://localhost:4002/api/auth/login', values);
+            const response = await axios.post('https://project-name-backend-1-5zgo.onrender.com/api/auth/login', values);
             alert(`Login successful! Token`);
             
             // Call the login function from CartContext

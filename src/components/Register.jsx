@@ -12,7 +12,7 @@ const Register = () => {
         initialValues={{ name: '', email: '', password: '' }}
         onSubmit={async (values, { setSubmitting, setErrors }) => {
           try {
-            const response = await axios.post('http://localhost:4002/api/auth/register', values);
+            const response = await axios.post('https://project-name-backend-1-5zgo.onrender.com/api/auth/register', values);
             alert(response.data.message);
           } catch (error) {
             setErrors({ email: error.response.data.message || 'Registration failed' });
