@@ -9,4 +9,5 @@ Currently, two official plugins are available:
 
 
 Ecommerce Website(HaveMore) -Frontend 
+using reactjs for jsx frontend logic,bootstrap for css 
 
