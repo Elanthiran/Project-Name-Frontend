@@ -89,10 +89,12 @@ function Create() {
                                 <input type="text" placeholder="imageUrl"  id="imageInput" className="form-control" value={image} onChange={(e) => setImage(e.target.value)} />
                             </div>
                             
-                           <button className="btn btn-primary w-100" type="submit">
+                          <Link to={"/crud"}>
+                          <button className="btn btn-primary w-100" type="submit">
                                 
                                 Add Product
                             </button>
+                          </Link> 
 
                         </form>
                     </div>
