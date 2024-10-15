@@ -75,16 +75,16 @@ const[user,setUser]=useState([])
        
 <Routes>
   <Route path="/" element={<All  users={users} />} />
-  <Route path="Icecream" element={<Icecream users={users} />} />
-  <Route path="Cake" element={<Cake users={users}/>} />
-  <Route path="Juice" element={<Juice users={users} />} />
-  <Route path="cart" element={<Cart />} />
-  <Route path="checkout" element={<CheckoutPage />} />
-  <Route path="order-confirmation" element={<OrderConfirmationPage/>} />
-  <Route path="Create" element={<Create />}/>
+  <Route path="/Icecream" element={<Icecream users={users} />} />
+  <Route path="/Cake" element={<Cake users={users}/>} />
+  <Route path="/Juice" element={<Juice users={users} />} />
+  <Route path="/cart" element={<Cart />} />
+  <Route path="/checkout" element={<CheckoutPage />} />
+  <Route path="/order-confirmation" element={<OrderConfirmationPage/>} />
+  <Route path="/Create" element={<Create />}/>
   
-  <Route path="Crud" element={<Crud />}/>
-  <Route path="order" element={<Order />} />
+  <Route path="/Crud" element={<Crud />}/>
+  <Route path="/order" element={<Order />} />
   
   <Route path="/user" element={<UserDashboard user={user}/>} />
   
