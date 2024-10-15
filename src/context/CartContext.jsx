@@ -58,7 +58,8 @@ export const CartProvider = ({ children }) => {
   const [cart, dispatch] = useReducer(cartReducer, [], getCartFromLocalStorage);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(null);
-  const [user, setUser] = useState(null);
+  const[user,setUser]=useState(null)
+  
   
 
   useEffect(() => {
@@ -82,7 +83,7 @@ export const CartProvider = ({ children }) => {
   };
     useEffect(() => {
     axios
-      .get("http://localhost:4002/getUsers")
+      .get("https://project-name-backend-1-5zgo.onrender.com/getUsers")
       .then((response) => {
         console.log(response.data);
         setUser(response.data);
@@ -92,22 +93,23 @@ export const CartProvider = ({ children }) => {
       });
   }, []);
 
-  const login = (userToken) => {
-    setToken(userToken);
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const login = (token) => {
     setIsLoggedIn(true);
-    setUser(userData);
-  
+    localStorage.setItem('token', token);
   };
 
   const logout = () => {
-    setToken(null);
     setIsLoggedIn(false);
-    setUser(null);
-    
-    
-    
-    localStorage.removeItem('cart'); // Optional: Clear cart from local storage if needed
+    localStorage.removeItem('token');
   };
+
 
   return (
     <CartContext.Provider

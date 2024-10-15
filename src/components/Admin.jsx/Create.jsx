@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useThisContext } from "../../context/usercontext";
 import axios from "axios";
-import { useCart } from "../../context/CartContext";
+
 
 function Create() {
     const { title, domain, head, price, setTitle, setDomain, setHead, setPrice, image, setImage } = useThisContext();
-    const{user}=useCart()
+    
     
     
 

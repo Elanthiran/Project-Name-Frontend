@@ -37,6 +37,9 @@ const Login = () => {
             const response = await axios.post('https://project-name-backend-1-5zgo.onrender.com/api/auth/login', values);
             alert(`Login successful! Token`);
             
+
+            
+            
             // Call the login function from CartContext
             login(response.data.token);
             
@@ -46,6 +49,7 @@ const Login = () => {
             } else {
               navigate("/");
             }
+           
           } catch (error) {
             setErrors({ email: error.response.data.message || 'Login failed' });
           } finally {
