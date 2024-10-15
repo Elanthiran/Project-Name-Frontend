@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useThisContext } from "../../context/usercontext";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 function Create() {
@@ -88,10 +89,10 @@ function Create() {
                                 <input type="text" placeholder="imageUrl"  id="imageInput" className="form-control" value={image} onChange={(e) => setImage(e.target.value)} />
                             </div>
                             
-                            <button className="btn btn-primary w-100" type="submit">
+                           <Link to={"/Crud"}><button className="btn btn-primary w-100" type="submit">
                                 
                                 Add Product
-                            </button>
+                            </button></Link> 
 
                         </form>
                     </div>
